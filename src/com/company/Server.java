@@ -8,7 +8,6 @@ import java.util.ArrayList;
 
 public class Server extends Thread {
     private static ArrayList<BufferedWriter>clients;
-    private static ArrayList<String>clientsName;
     private String name;
     private final Socket connection;
     private BufferedReader bufferedReader;
@@ -76,7 +75,6 @@ public class Server extends Thread {
 
             clients.add(bufferedWriter);
             name = message = bufferedReader.readLine();
-            clientsName.add(name);
 
             while(!"sair".equalsIgnoreCase(message) && message != null) {
 
