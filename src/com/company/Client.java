@@ -64,8 +64,8 @@ public class Client extends JFrame implements ActionListener, KeyListener {
         panelContent.add(scrollPane);
         panelContent.add(labelMessage);
         panelContent.add(textMessage);
-        panelContent.add(buttonQuit);
         panelContent.add(buttonSend);
+        panelContent.add(buttonQuit);
 
         panelContent.setBackground(Color.LIGHT_GRAY);
         text.setBorder(BorderFactory.createEtchedBorder(Color.BLUE, Color.BLUE));
