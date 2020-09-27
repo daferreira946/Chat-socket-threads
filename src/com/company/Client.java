@@ -45,6 +45,8 @@ public class Client extends JFrame implements ActionListener, KeyListener {
 
         JLabel labelHistory = new JLabel("Histórico");
         JLabel labelMessage = new JLabel("Mensagem");
+        JLabel labelPrivate = new JLabel("Para privadas use no início: /Nome/");
+        JLabel labelPrivateWarning = new JLabel("Não é sensível a caixa do texto");
 
         buttonSend = new JButton("Enviar");
         buttonSend.setToolTipText("Enviar Mensagem");
@@ -66,6 +68,8 @@ public class Client extends JFrame implements ActionListener, KeyListener {
         panelContent.add(textMessage);
         panelContent.add(buttonSend);
         panelContent.add(buttonQuit);
+        panelContent.add(labelPrivate);
+        panelContent.add(labelPrivateWarning);
 
         panelContent.setBackground(Color.LIGHT_GRAY);
         text.setBorder(BorderFactory.createEtchedBorder(Color.BLUE, Color.BLUE));
@@ -78,7 +82,6 @@ public class Client extends JFrame implements ActionListener, KeyListener {
         setSize(300,400);
         setVisible(true);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
-
     }
 
     public static void main(String[] args) throws IOException{
@@ -156,6 +159,7 @@ public class Client extends JFrame implements ActionListener, KeyListener {
         outputStreamWriter.close();
         outputStream.close();
         socket.close();
+        System.exit(0);
 
     }
 
